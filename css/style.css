@@ -1,0 +1,377 @@
+/**************************************/
+/***************FONTS******************/
+/**************************************/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/**************************************/
+/**************GENERAL*****************/
+/**************************************/
+*{
+    /* transition: all .5s ease; */
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: #EFEFEF;
+}
+.bg-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg-image-grayscale{
+    filter: grayscale(100%);
+}
+section {
+    background-color: #EFEFEF;
+}
+footer{
+    background-color: #fff;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.style-hover-underline{
+    position: relative;
+}
+.style-hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #000;
+    bottom: -3px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+  
+.style-hover-underline:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/**************************************/
+/************HOME PAGE*****************/
+/**************************************/
+.actor-photographer-section{
+    height: inherit;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.actor-photographer-section.active{
+    z-index: 40;
+}
+.image-layer{
+    height: inherit;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.actor-photographer-section .image-layer{
+    background-size: 100vh;
+    background-position: bottom center;
+}
+.content-layer{
+    padding: 25px 50px;
+    position: relative;
+    z-index: 20;
+    height: inherit;
+}
+.actor-photographer-section .content-layer a{
+    height: 90vh;
+}
+.content-layer a{
+    color: #201C1C;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 47px;
+    letter-spacing: -0.025em;
+    text-decoration: none;
+    display: block;
+}
+.content-layer a span{
+    position: relative;
+}
+.content-layer a span:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+.content-layer a:hover span:before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.ap-section{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 30;
+    transition: all 1s ease;
+}
+.actor-section{
+    left: -2000px;
+}
+.photographer-section{
+    right: -2000px;
+}
+.actor-section.active{
+    left: 0;
+}
+.photographer-section.active{
+    right: 0;
+}
+.actor-section .image-layer {
+    background-size: 70vh;
+    background-position: bottom right;
+}
+.ap-section-content .nav-tabs{
+    flex-direction: column;
+    border: none;
+}
+.ap-section-content .nav-tabs{
+    border: none;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+.ap-section-content .nav-tabs li{
+    margin-bottom: 30px;
+}
+.ap-section-content .nav-tabs li button {
+    margin: 0;
+    border: 0;
+    background-color: transparent !important;
+    border-radius: 0;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.025em;
+    text-transform: capitalize;
+    color: #201C1C;
+    padding-left: 0;
+    min-width: 115px;
+    text-align: left;
+}
+.ap-section-content .nav-tabs li button:hover, 
+.ap-section-content .nav-tabs li button:focus, 
+.ap-section-content .nav-tabs li button:active{
+    box-shadow: none;
+    border: none;
+}
+.ap-section-content p{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+    /* or 38px */
+    letter-spacing: -0.025em;
+    color: #000000;
+}
+.ap-section-content .tab-content{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nsbbox img{
+    left: 50% !important;
+}
+.nsbbox{
+    margin-bottom: 25px;
+    text-align: center;
+}
+.photographer-section .image-layer{
+    background-size: 55vh;
+    background-position: left bottom;
+}
+.vertical-nav-right-algin{
+    float: right;
+    text-align: right;
+}
+.vertical-nav-right-algin button{
+    text-align: right !important;
+}
+.ap-section-content .nav-tabs .nav-link:not(.active){
+    opacity: 0.5;
+}
+/**************************************/
+/****************FOOTER****************/
+/**************************************/
+footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    padding: 25px 50px;
+}
+footer ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+footer ul li{
+    margin-right: 20px;
+}
+footer ul li a{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000000;
+}
+footer ul li a:hover{
+    color: #000;
+}
+footer ul li img{
+    height: 15px;
+    width: auto;
+}
+footer ul li img + span{
+    margin-left: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.home-nav ul{
+    justify-content: center;
+}
+.footer-main-nav {
+    display: flex;
+    justify-content: end;
+}
+.language-switch{
+    margin-right: 30px;
+}
+.language-switch ul li{
+    position: relative;
+}
+.language-switch ul li:after{
+    content: "";
+    height: 16px;
+    width: 1px;
+    background-color: #000000;
+    position: absolute;
+    top: 3px;
+    right: -10px;
+}
+.language-switch ul li:last-child:after{
+    display: none;
+}
+.footer-navigation ul li{
+    position: relative;
+}
+.footer-navigation ul li:after{
+    content: "-";
+    position: absolute;
+    right: -15px;
+}
+.footer-navigation ul li:last-child:after{
+    display: none;
+}
+/**************************************/
+/*********PRIVACY POLICY***************/
+/**************************************/
+.main-navigation{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+.main-navigation ul li{
+    margin-bottom: 30px;
+}
+.main-navigation ul li a{
+    margin: 0;
+    border: 0;
+    background-color: transparent !important;
+    border-radius: 0;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.025em;
+    text-transform: capitalize;
+    color: #201C1C;
+    padding-left: 0;
+    min-width: 115px;
+}
+.main-page-content{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+.main-page-content p{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+    /* or 38px */
+    letter-spacing: -0.025em;
+    color: #000000;
+}
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
